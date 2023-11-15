@@ -12,10 +12,13 @@ pip install requests pyyaml
 ```
 $ cat ~/.aidevs2
 APIKEY: '12345678-abcd-1234-5678-0123456789ab'
+OPENAI_KEY: 'sk-your-secret-openai-key-here'
 ```
 
 # Usage:
 
-Run the script.
+Run the scripts in `tasks` directory:
 
-`python helloapi/helloapi.py`
+`python tasks/helloapi.py`
+
+The chat tasks have solutions in the `chat` directory.
