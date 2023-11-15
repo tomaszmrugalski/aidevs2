@@ -1,5 +1,13 @@
-# This is a solution to the moderation task from aidevs2 course
+# This is a solution to the inprompt task from aidevs2 course
 # See https://zadania.aidevs.pl/ for details
+#
+# The overall goal is to:
+# 1. Get a token from aidevs
+# 2. Get the task from aidevs - list of statements about various people and a question about one of them
+# 3. Use GPT to extract the person's name
+# 4. Filter the list of statements to find the one that contains the name
+# 5. Use GPT to answer the question about the person, provide what we know about him/her in the system message.
+# 6. Send the answer to aidevs
 
 import requests
 import json
