@@ -1,13 +1,14 @@
 # This is a solution to the embedding task from aidevs2 course
 # See https://zadania.aidevs.pl/ for details
 #
+# Bibliography:
+# https://platform.openai.com/docs/guides/embeddings/what-are-embeddings
+#
 # The overall goal is to:
 # 1. Get a token from aidevs
 # 2. Get the task from aidevs -
-# 3. ...
-# 4. ...
-# 5. ...
-# 6. Send the answer to aidevs
+# 3. Send the text in question to OpenAI (different API than for chat), get the embeddings (a 1536 dimensional vector)
+# 4. Send the answer to aidevs
 
 import requests
 import json
@@ -60,13 +61,13 @@ body = { "input": input, "model": "text-embedding-ada-002"}
 print(f'OpenAI, step 1: Getting {url}, using {OPENAI_KEY}')
 page = requests.post(url, json=body, headers=headers)
 data = json.loads(page.text)
-print(f"OpenAI, step 1: Response body: {data}")
+print(f"OpenAI, step 1: Response body: {len(page.text)} chars")
 
 embeddings = data['data'][0]['embedding']
 
-print(f"Embeddings: {len(embeddings)} element(s)")
+print(f"OpenAI, received embeddings: {len(embeddings)} element(s)")
 
-# STEP 6: Send the answer
+# STEP 4: Send the answer
 url = BASE_URL + '/answer/' + token
 answer={ 'answer': embeddings }
 print(f'aidevs: Getting {url}, sending {answer}')
