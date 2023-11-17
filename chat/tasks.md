@@ -88,3 +88,14 @@ Przykładowe odpowiedzi:
 
 {"kategoria":"pralka","producent":"Whirpool","akcja":"zwrot","data":"20231116"}
 ```
+
+
+# cities
+
+https://zadania.aidevs.pl/chat/cities
+
+```
+Przygotuj liste 7 ciekawostek. w każdej ciekawostce nie wolno wspominać nazwy miasta.
+
+Z listy usuń wszystkie wystąpienia nazwy miasta. Nazwię miasta zastąp słowem "MIASTO"
+```
