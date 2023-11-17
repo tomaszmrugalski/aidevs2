@@ -7,7 +7,9 @@ source venv/bin/activate
 pip install requests pyyaml
 ```
 
-2. Create a file in your home directory with the APIKEY.
+Some scripts may require additional python packages: openai requests_toolbelt.
+
+2. Create a file in your home directory with the APIKEY (for aidevs) and OPENAI_KEY (for OpenAI).
 
 ```
 $ cat ~/.aidevs2
