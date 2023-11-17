@@ -19,7 +19,7 @@ OPENAI_KEY: 'sk-your-secret-openai-key-here'
 
 # Usage:
 
-Run the scripts in `tasks` directory:
+Run the scripts in `tasks` directory. For example:
 
 `python tasks/helloapi.py`
 
