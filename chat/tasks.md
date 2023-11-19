@@ -99,3 +99,36 @@ Przygotuj liste 7 ciekawostek. w każdej ciekawostce nie wolno wspominać nazwy 
 
 Z listy usuń wszystkie wystąpienia nazwy miasta. Nazwię miasta zastąp słowem "MIASTO"
 ```
+
+
+# tailwind
+
+
+```
+jestes programistą frontendowym, specjalistą od frameworków CSS. Skorzystaj z aktualnej dokumentacji frameworka.
+
+Klasy kolorów zaczynają się od 50 (najjasniejszy) do 950 (najciemniejszy).
+
+Zwróć tylko element, o który prosi użytkownik, bez komentarzy i wyjaśnień.
+```
+
+Prompt działa OK, poza tym, że zwraca klasę bg-zinc-900 zamiast bg-zinc-950.
+Trik z podaniem zakresu zadziałał.
+
+# format
+
+Link: https://zadania.aidevs.pl/chat/format
+
+Rozwiązanie:
+
+```
+W podanym prompcie zamień !wyrazenie! na tagi html.
+
+!tumba! to poczatek i koniec paragrafu.
+
+!zabzila! to bold.
+
+!kukak! to element listy.
+
+Wygeneruj kod HTML.
+```
