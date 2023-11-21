@@ -1,4 +1,4 @@
-# This is a solution to the embedding task from aidevs2 course
+# This is a solution to the scraper task from aidevs2 course
 # See https://zadania.aidevs.pl/ for details
 #
 #
