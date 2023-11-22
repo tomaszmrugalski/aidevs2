@@ -34,3 +34,10 @@ Run the scripts in `tasks` directory. For example:
 `python tasks/helloapi.py`
 
 The chat tasks have solutions in the `chat` directory.
+
+## Links
+
+- The course homepage: https://aidevs.pl
+- Solutions by other participants:
+  - https://github.com/domik82/aidevs2 - python
+  -
