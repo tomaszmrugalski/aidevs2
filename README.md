@@ -1,3 +1,13 @@
+# Overview
+
+These are my solutions to the aidevs2! training. For details, see https://aidevs.pl.
+To fully understand the code, you need to have access to the training.
+
+The solutions are intentionally simplistic, almost primitive. The goal of this training
+is to gain experience with OpenAI and other AI tools, not to show off python skills.
+The training is done by people of varied background, ranging from no coding to senior
+programmers.
+
 # Installation
 
 1. Setup the python environment
