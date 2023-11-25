@@ -31,7 +31,7 @@ APIKEY = load_apikey()
 OPENAI_KEY = load_openai_key()
 TASK = 'ownapi'
 
-OWNAPI_URL = 'https://megaton.klub.com.pl:2137'
+OWNAPI_URL = 'https://svarog.space:2137/v1/knowledge'
 
 # STEP 1: Get the token from aidevs
 url = BASE_URL + '/token/' + TASK

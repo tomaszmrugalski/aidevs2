@@ -12,11 +12,11 @@
 # 3. wait for answers
 # 4. Profit!
 
-import requests
 import json
 import yaml
 import os
-from flask import Flask, request
+import requests
+from flask import Flask, request, jsonify
 
 def load_apikey():
     """Loads the aidevs API key from ~/.aidevs2"""
@@ -35,14 +35,38 @@ APIKEY = load_apikey()
 OPENAI_KEY = load_openai_key()
 TASK = 'knowledge'
 
+HOST = '::'
+PORT = 2137
+
 from flask import Flask
 app = Flask(__name__)
 
+@app.route('/')
+def root():
+    return 'Hello, aidevs!'
+
 @app.route("/v1/knowledge", methods=['POST'])
 def hello():
-    return {
-        "answer": "yes"
-    }
+    content = request.json
+    print(f"Received {content} from {request.remote_addr}")
+
+    system_prompt = 'Please answer the users question briefly.'
+    question = content['question']
+    url = 'https://api.openai.com/v1/chat/completions'
+    headers = { 'Content-Type': 'application/json', 'Authorization': f'Bearer {OPENAI_KEY}' }
+    body = { "messages": [{ "role": "system", "content": system_prompt}, {"role":"user", "content": question}], "model": "gpt-3.5-turbo"}
+
+    print(f'OpenAI: Getting {url}, using {OPENAI_KEY}')
+    print(f"OpenAI: system prompt: {system_prompt}")
+    print(f"OpenAI: user message: {question}")
+    page = requests.post(url, json=body, headers=headers)
+    data = json.loads(page.text)
+    answer = data['choices'][0]['message']['content']
+    print(f"OpenAI answer: the answer is {answer}")
+
+    return jsonify({
+        "reply": answer
+    })
 
 if __name__ == "__main__":
-    app.run(ssl_context=('cert.pem', 'key.pem'), port=2137)
+    app.run(ssl_context=('cert.pem', 'key.pem'), host=HOST, port=PORT)
